@@ -1,0 +1,63 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              character_limit: 0
+              display: Title
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              restrict: false
+              automatic_line_breaks: true
+              automatic_links: false
+              escape_markup: true
+              smartypants: false
+              type: markdown
+              display: Content
+          -
+            handle: template
+            field:
+              type: template
+              display: Template
+          -
+            handle: form
+            field:
+              max_items: 1
+              mode: select
+              type: form
+              display: 'Form Field'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

@@ -1,0 +1,83 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: membership
+            field:
+              options:
+                active: 'active member'
+                alumnus: almunus
+                potential: potential
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: Membership
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 33
+          -
+            handle: name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: 'First and Last Name'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 33
+          -
+            handle: activeNumber
+            field:
+              input_type: text
+              character_limit: 4
+              antlers: false
+              type: text
+              display: 'Active Number'
+              width: 33
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: 'Email Address'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 50
+          -
+            handle: phoneNumber
+            field:
+              input_type: tel
+              character_limit: 20
+              autocomplete: tel
+              antlers: false
+              type: text
+              display: 'Phone Number'
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              width: 50

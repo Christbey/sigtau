@@ -1,0 +1,77 @@
+{{form:actives}}
+    {{ if success }}
+        <div class="bg-green-600 text-white p-4 rounded-md shadow-md text-center">
+            {{ success }}
+        </div>
+    {{ else }}
+        {{ if errors }}
+            <div class="bg-red-600 text-white p-4 rounded-md shadow-sm mb-4">
+                <ul>
+                    {{ errors }}
+                    <li>{{ value }}</li>
+                    {{ /errors }}
+                </ul>
+            </div>
+        {{ /if }}
+        <div class="space-y-4 bg-gray-50">
+            <section class="bg-white dark:bg-gray-900">
+                <div class="pb-16 px-4 mx-auto max-w-screen-md">
+                    <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-center text-gray-900 dark:text-gray-200">Contact Sig Tau</h2>
+                    <p class="mb-8 lg:mb-12 font-light text-center text-gray-500 dark:text-gray-300 sm:text-xl">Want to get in touch? Drop us a message and we'll get back to you as soon as we can to chat!
+                    </p>
+
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" class="form-input">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" class="form-input">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" name="phoneNumber" id="phoneNumber" class="form-input">
+                    </div>
+                    <div class="form-field">
+                        <label for="membership">Are you an Active, Alumnus or Potential new member?</label>
+                        <select name="membership" id="membership" required>
+                            <option value="">Membership Level?</option>
+                            <option value="active">Active</option>
+                            <option value="alumnus">Alumnus</option>
+                            <option value="potential">Potential</option>
+                        </select>
+                        <div id="conditionalField" style="display: none;" class="py-3">
+                            <label for="activeNumber">Active Number:</label>
+                            <input type="text" name="activeNumber" id="activeNumber">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-600 text-gray-900 font-semibold mt-3 py-3 px-4 rounded-md focus:outline-none">
+                        Submit
+                    </button>
+                </div>
+            </section>
+            {{ if error }}
+                <p class="mt-2 text-sm text-red-600">{{ error }}</p>
+            {{ /if }}
+        </div>
+        <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+    {{ /if }}
+{{/form:actives }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const membershipSelect = document.getElementById('membership');
+        const conditionalField = document.getElementById('conditionalField');
+
+        membershipSelect.addEventListener('change', function () {
+            const value = this.value;
+            if (value === 'active' || value === 'alumnus') {
+                conditionalField.style.display = 'block';
+            } else {
+                conditionalField.style.display = 'none';
+            }
+        });
+    });
+</script>
