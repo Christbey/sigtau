@@ -1,0 +1,35 @@
+title: 'page builder'
+fields:
+  -
+    handle: blocks
+    field:
+      collapse: false
+      previews: true
+      fullscreen: true
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          instructions: null
+          icon: null
+          sets:
+            forms:
+              display: forms
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: forms
+            pages:
+              display: pages
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: pages
+      type: replicator
+      display: blocks
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: true

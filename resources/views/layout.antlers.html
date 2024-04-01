@@ -11,10 +11,10 @@
     </head>
     <body class="bg-white dark:bg-gray-900 font-sans leading-normal text-grey-800 dark:text-gray-400 px-4 sm:px-10" x-data="{ showMobileNav: false }">
         {{ partial:nav }}
-        {{ template_content }}
-        {{ if slug == 'contact' }}
-            {{ partial:forms/contact }}
-        {{ endif }}
+        {{ blocks }}
+        {{ partial src="sets/{type}/{version}" }}
+        {{ /blocks }}
+
         {{ partial:footer }}
     </body>
 </html>

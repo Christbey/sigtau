@@ -1,0 +1,21 @@
+title: forms
+fields:
+  -
+    handle: version
+    field:
+      options:
+        active: 'Contact Form'
+      taggable: false
+      push_tags: false
+      multiple: false
+      max_items: 1
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: Variant
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
