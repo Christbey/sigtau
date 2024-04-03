@@ -26,6 +26,27 @@ fields:
               fields:
                 -
                   import: pages
+            tables:
+              display: Tables
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: tables
+            text:
+              display: Text
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: text
+            bard:
+              display: Bard
+              instructions: null
+              icon: null
+              fields:
+                -
+                  import: bard
       type: replicator
       display: blocks
       listable: hidden

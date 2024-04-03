@@ -11,6 +11,7 @@
     </head>
     <body class="bg-white dark:bg-gray-900 font-sans leading-normal text-grey-800 dark:text-gray-400 px-4 sm:px-10" x-data="{ showMobileNav: false }">
         {{ partial:nav }}
+
         {{ blocks }}
         {{ partial src="sets/{type}/{version}" }}
         {{ /blocks }}

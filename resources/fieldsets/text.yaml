@@ -1,0 +1,48 @@
+title: Text
+fields:
+  -
+    handle: version
+    field:
+      taggable: false
+      push_tags: false
+      multiple: false
+      clearable: false
+      searchable: true
+      cast_booleans: false
+      type: select
+      display: Variant
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      options:
+        text_basic: 'Basic Text'
+        textarea: 'Text Area'
+  -
+    handle: text
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: Text
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        version: 'equals text_basic'
+  -
+    handle: textarea
+    field:
+      antlers: false
+      type: textarea
+      display: Textarea
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+      if:
+        version: 'equals textarea'

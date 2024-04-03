@@ -1,6 +1,16 @@
-<div class="max-w-5xl mx-auto relative mt-16 content">
-    {{ svg src="/assets/site/scratches" class="absolute text-gray-800 mt-8 top-0 left-0 w-20 hidden md:block" }}
-    <article class="lg:py-32 max-w-2xl mx-auto">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ settings:site_name }} | {{ title }} </title>
+    <meta name="description" content="{{ excerpt ?? title }}">
+    <meta name="theme-color" content="00908F">
+    {{ vite src="resources/js/site.js|resources/css/site.css" }}
+</head>
+<body class="bg-white dark:bg-gray-900 font-sans leading-normal text-grey-800 dark:text-gray-300 px-4 sm:px-10" x-data="{ showMobileNav: false }">
+
+<div class="max-w-5xl mx-auto relative mt-16 ">
+    <article class="lg:py-32 max-w-3xl mx-auto">
         <h1>{{ title }}</h1>
         <div class="bg-gray-800 inline-block text-sm mb-16 pr-4 pl-16 -ml-16 uppercase tracking-widest text-white py-1 rounded-r-full">
             Published
@@ -10,7 +20,9 @@
             on {{ date format="M j, Y" }}
         </div>
         <div class="content">
-            {{ content | widont }}
+            {{ blocks }}
+            {{ partial src="sets/{type}/{version}" }}
+            {{ /blocks }}
         </div>
     </article>
 </div>
