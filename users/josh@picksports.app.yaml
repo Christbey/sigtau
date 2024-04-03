@@ -6,3 +6,4 @@ preferences:
   collections:
     articles:
       after_save: continue_editing
+  locale: en
