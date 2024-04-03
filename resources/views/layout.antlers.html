@@ -7,6 +7,8 @@
         <title>{{ settings:site_name }} | {{ title }} </title>
         <meta name="description" content="{{ excerpt ?? title }}">
         <meta name="theme-color" content="00908F">
+        <link rel="icon" href="../assets/Shield-RGB.png" type="image/x-icon">
+
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
     <body class="bg-white dark:bg-gray-900 font-sans leading-normal text-grey-800 dark:text-gray-400 px-4 sm:px-10" x-data="{ showMobileNav: false }">
