@@ -132,3 +132,61 @@ h1 {
     font-size: 0.875em;
 }
 
+.article-list {
+    font-family: Arial, sans-serif; /* Use your preferred font */
+}
+
+.article-item {
+    padding: 16px 0; /* Spacing around articles */
+    border-bottom: 1px solid #e5e7eb; /* Divider */
+}
+
+.article-item:last-child {
+    border-bottom: none; /* No divider after the last item */
+}
+
+.title-and-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-title {
+    font-size: 1.25rem; /* 16px */
+    font-weight: bold;
+    color: #e5e7eb; /* Dark text color */
+    margin-right: 4px; /* Ensures some space between title and date badge */
+
+}
+
+.date-badge {
+    background-color: red;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 9999px; /* Fully rounded corners */
+    font-size: 0.75rem; /* Smaller font size for the date */
+}
+
+.article-link {
+    text-decoration: none; /* Removes underline */
+    display: block; /* Ensures the link occupies the entire space */
+    color: inherit; /* Inherits color from parent */
+
+}
+
+.article-excerpt {
+    font-size: 0.875rem; /* 14px */
+    color: #e5e7eb; /* Lighter text color for excerpts */
+    margin-top: 8px; /* Space between title/date and excerpt */
+}
+
+.article-link:hover .article-title,
+.article-link:hover .article-excerpt {
+    color: #bfdbfe; /* Changes the text color to blue on hover */
+    text-decoration: underline; /* Optionally add an underline to indicate it's clickable */
+}
+
+.article-title, .article-excerpt {
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+

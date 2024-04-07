@@ -7,3 +7,9 @@ preferences:
     articles:
       after_save: continue_editing
   locale: en
+  forms:
+    actives:
+      columns:
+        - name
+        - membership
+        - activeNumber
