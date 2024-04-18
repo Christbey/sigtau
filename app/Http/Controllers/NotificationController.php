@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
 class NotificationController extends Controller
 {
     public function send(Request $request)
@@ -34,6 +34,9 @@ class NotificationController extends Controller
             ]
         ]);
 
+        Log::info('Received Zapier Secret: ' . $request->header('X-Zapier-Secret'));
+        Log::info('Expected Secret: ' . env('ZAPIER_SECRET'));
+        Log::info('Webhook response:', $response->json());
         if ($response->successful()) {
             return response()->json(['message' => 'Notification sent successfully!'], 200);
         } else {
