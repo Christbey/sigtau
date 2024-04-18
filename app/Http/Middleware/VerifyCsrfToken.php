@@ -12,8 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        'https://fp1lytgplv.sharedwithexpose.com/*',
-        'https://sigtau-epsilon.com/*',
+        'https://sigtau-epsilon.com/webhook/zapier',
 
     ];
 }
