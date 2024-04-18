@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Log;
 
 class WebhookController extends Controller
 {
-/*    public function handle(Request $request)
+    public function handle(Request $request)
     {
         // Authenticate the request
         if ($request->header('X-Zapier-Secret') !== env('ZAPIER_SECRET')) {
@@ -30,7 +30,7 @@ class WebhookController extends Controller
             'message' => $message,
             'permalink_url' => $permalinkUrl
         ]));
-    }*/
+    }
 
     private function sendGenericMessage($message)
     {
