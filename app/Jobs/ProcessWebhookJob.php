@@ -1,13 +1,30 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Jobs;
 
+use App\Http\Controllers\NotificationController;
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Http\Request;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
 
-class WebhookController extends Controller
+class ProcessWebhookJob implements ShouldQueue
 {
-/*    public function handle(Request $request)
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    protected $message;
+    protected $permalinkUrl;
+
+    public function __construct($message, $permalinkUrl)
+    {
+        $this->message = $message;
+        $this->permalinkUrl = $permalinkUrl;
+    }
+
+    public function handle(Request $request)
     {
         // Authenticate the request
         if ($request->header('X-Zapier-Secret') !== env('ZAPIER_SECRET')) {
@@ -30,11 +47,6 @@ class WebhookController extends Controller
             'message' => $message,
             'permalink_url' => $permalinkUrl
         ]));
-    }*/
-
-    private function sendGenericMessage($message)
-    {
-        // Log the message
-        Log::info($message);
     }
 }
+

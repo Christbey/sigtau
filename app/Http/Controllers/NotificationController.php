@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\ProcessWebhookJob;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -53,4 +54,15 @@ class NotificationController extends Controller
             return response()->json(['error' => 'Server error occurred.', 'details' => $e->getMessage()], 500);
         }
     }
+
+    public function receiveWebhook(Request $request)
+    {
+        $message = $request->input('message');
+        $permalinkUrl = $request->input('permalink_url');
+
+        ProcessWebhookJob::dispatch($message, $permalinkUrl);
+
+        return response()->json(['message' => 'Webhook received and is being processed'], 200);
+    }
+
 }
