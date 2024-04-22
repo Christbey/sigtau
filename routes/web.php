@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,10 @@ use Illuminate\Support\Facades\Route;
 //    'title' => 'Example'
 // ]);
 
-use App\Http\Controllers\NotificationController;
 
-Route::get('/send-notification', [NotificationController::class, 'send']);
+/*Route::get('/send-notification', [NotificationController::class, 'send']);
 
 // In routes/web.php or routes/api.php
 use App\Http\Controllers\WebhookController;
 
-Route::post('/webhook/zapier', [WebhookController::class, 'handle']);
+Route::post('/webhook/zapier', [WebhookController::class, 'handle']);*/

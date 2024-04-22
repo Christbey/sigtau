@@ -1,5 +1,5 @@
 <?php
-
+/*
 namespace App\Listeners;
 
 use Statamic\Events\FormSubmitted;
@@ -63,4 +63,4 @@ class FormSubmittedListener
         $context = stream_context_create($options);
         file_get_contents($webhookUrl, false, $context);
     }
-}
+}*/

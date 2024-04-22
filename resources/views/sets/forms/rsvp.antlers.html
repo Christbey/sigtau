@@ -1,0 +1,59 @@
+<div class="flex justify-center items-center min-h-screen">
+    <div class="w-full max-w-md p-8 bg-gray-700 shadow-md rounded-lg">
+        {{ form:rsvp }}
+            <!-- Success Message -->
+            {{ if success }}
+                <div class="bg-green-500 text-white p-4 rounded-md">
+                    {{ success }}
+                </div>
+            {{ else }}
+                <!-- Error Messages -->
+                {{ if errors }}
+                    <div class="bg-red-500 text-white p-4 rounded-md">
+                        {{ errors }}
+                        {{ value }}<br>
+                        {{ /errors }}
+                    </div>
+                {{ /if }}
+
+                <!-- Form Fields -->
+                <div class="mb-4">
+                    <label class="block text-gray-200 text-sm font-bold mb-2">
+                        {{ display }}
+                    </label>
+                        <div class="form-field">
+                            <label class="text-gray-200" for="name">Name</label>
+                            <input type="text" name="name" id="name" class="form-input" required>
+                        </div>
+                    <div class="form-field">
+                        <label class="text-gray-200" for="select_field">Attending?</label>
+                        <select name="select_field" id="select_field" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="maybe">Maybe</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label class="text-gray-200" for="activity">Activity?</label>
+                        <select name="activity" id="activity" required>
+                            <option value="">Select One</option>
+                            <option value="gold">Golf</option>
+                            <option value="disc_golf">Disc Golf</option>
+                            <option value="big_brutus">Big Brutus</option>
+                            <option value="casino">Casino</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Honeypot Field for Spam Prevention -->
+                <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+                {{ if error }}
+                    <p class="text-red-500 text-xs italic">{{ error }}</p>
+                {{ /if }}
+                <!-- Submit Button -->
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Submit
+                </button>
+            {{ /if }}
+        {{ /form:rsvp }}
+    </div>
+</div>
