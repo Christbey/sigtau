@@ -15,7 +15,7 @@ class FormSubmittedListener
             'content' => 'A new form submission has been received.',
             'embeds' => [
                 [
-                    'title' => 'New Submission Details',
+                    'title.antlers.html' => 'New Submission Details',
                     'fields' => [
                         [
                             'name' => 'Name',

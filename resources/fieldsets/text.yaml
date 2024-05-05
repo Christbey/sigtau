@@ -19,6 +19,7 @@ fields:
       options:
         text_basic: 'Basic Text'
         textarea: 'Text Area'
+        title: Title
   -
     handle: text
     field:

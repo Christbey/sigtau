@@ -15,7 +15,7 @@ use App\Http\Controllers\NotificationController;
 */
 
 // Route::statamic('example', 'example-view', [
-//    'title' => 'Example'
+//    'title.antlers.html' => 'Example'
 // ]);
 
 

@@ -10,8 +10,6 @@ tabs:
             field:
               type: text
               required: true
-              character_limit: 0
-              display: Title
               validate:
                 - required
           -

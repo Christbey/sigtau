@@ -4,7 +4,7 @@ sections:
     display: Main
     fields:
       -
-        handle: title
+        handle: title.antlers.html
         field:
           type: text
           localizable: false

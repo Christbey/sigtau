@@ -8,6 +8,11 @@ data:
       url: 'https://www.facebook.com/SigTauPittState'
       icon: site/social-icons/facebook.svg
     -
+      id: lvlsn1ck
+      name: Discord
+      url: 'https://discord.gg/f2ZXcbWz'
+      icon: site/social-icons/icons8-discord.svg
+    -
       id: um4h12pW
       name: Instagram
       url: 'https://www.instagram.com/sigtau_psu/'

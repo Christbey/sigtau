@@ -6,7 +6,7 @@ tabs:
       -
         fields:
           -
-            handle: title
+            handle: title.antlers.html
             field:
               type: text
               required: true

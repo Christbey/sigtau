@@ -1,4 +1,4 @@
 # admin:
-#   title: Administrator
+#   title.antlers.html: Administrator
 #   permissions:
 #     - super

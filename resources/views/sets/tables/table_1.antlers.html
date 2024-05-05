@@ -1,27 +1,30 @@
-<table class="my-4">
-    {{ table }}
-    {{ if first && first_row_headers }}
-        <thead>
-        <tr>
+<section class="max-h-screen">
+    <h2 class="text-yellow-500 max-w-3xl mx-auto">{{ title }}</h2>
+    <table class="my-4 max-w-3xl mx-auto border-collapse shadow-lg rounded-lg overflow-hidden">
+        {{ table }}
+        {{ if first && first_row_headers }}
+            <thead class="bg-gray-800">
+            <tr>
+                {{ cells }}
+                <th class="px-6 py-3 text-left text-sm font-semibold text-white border-b border-gray-600">{{ value|markdown }}</th>
+                {{ /cells }}
+            </tr>
+            </thead>
+        <tbody class="bg-gray-700 text-white">
+        {{ /if }}
+        {{ if !first && first_row_headers || !first_row_headers }}
+            {{ if first }}
+            <tbody class="bg-gray-700 text-white">
+            {{ /if }}
+        <tr class="{{ row_index % 2 == 0 ? 'bg-gray-700' : 'bg-gray-600' }}">
             {{ cells }}
-            <th>{{ value|markdown }}</th>
+            <td class="px-6 py-4 border-b border-gray-600">{{ value }}</td>
             {{ /cells }}
         </tr>
-        </thead>
-    <tbody>
-    {{ /if }}
-    {{ if !first && first_row_headers || !first_row_headers }}
-        {{ if first }}
-        <tbody>
+            {{ if last }}
+            </tbody>
+            {{ /if }}
         {{ /if }}
-    <tr>
-        {{ cells }}
-        <td class="px-3">{{ value }}</td>
-        {{ /cells }}
-    </tr>
-        {{ if last }}
-        </tbody>
-        {{ /if }}
-    {{ /if }}
-    {{ /table }}
-</table>
+        {{ /table }}
+    </table>
+</section>

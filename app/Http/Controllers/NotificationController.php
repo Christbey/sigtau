@@ -22,7 +22,7 @@ class NotificationController extends Controller
                 'avatar_url' => 'https://pngimg.com/uploads/meta/meta_PNG1.png', // Customize the avatar
                 'embeds' => [
                     [
-                        'title' => 'New Facebook Post!',
+                        'title.antlers.html' => 'New Facebook Post!',
                         'description' => 'Click below to view the post on Facebook.',
                         'color' => hexdec('4A90E2'), // Discord embed side color
                         'fields' => [

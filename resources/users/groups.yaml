@@ -1,4 +1,4 @@
 # admin:
-#   title: Administrators
+#   title.antlers.html: Administrators
 #   roles:
 #     - admin
