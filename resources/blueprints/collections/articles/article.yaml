@@ -6,11 +6,10 @@ tabs:
       -
         fields:
           -
-            handle: title.antlers.html
+            handle: title
             field:
               type: text
               required: true
-              display: Title
               validate:
                 - required
           -

@@ -30,9 +30,11 @@ p {
 }
 
 
+/*
 p:first-of-type {
     @apply text-lg;
 }
+*/
 
 blockquote {
     @apply text-center font-black italic px-4 mb-12 pt-6 text-3xl leading-tight;
@@ -146,7 +148,7 @@ table {
 }
 
 .article-title {
-    font-size: 1.25rem;
+    font-size: 20px;
     font-weight: bold;
     color: #e5e7eb;
     margin-right: 4px;
@@ -167,9 +169,9 @@ table {
 }
 
 .article-excerpt {
-    font-size: 0.875rem;
+    font-size: 16px;
     color: #e5e7eb;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .article-link:hover .article-title,

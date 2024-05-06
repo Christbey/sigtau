@@ -13,22 +13,6 @@ tabs:
               validate:
                 - required
           -
-            handle: subtitle
-            field:
-              character_limit: 0
-              type: text
-              display: Subtitle
-          -
-            handle: content
-            field:
-              restrict: false
-              automatic_line_breaks: true
-              automatic_links: false
-              escape_markup: true
-              smartypants: false
-              type: markdown
-              display: Content
-          -
             import: blocks
   sidebar:
     display: Sidebar
