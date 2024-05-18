@@ -5,7 +5,7 @@ fields:
     field:
       options:
         active: 'Contact Form'
-        rsvp: Rsvp
+        subscribe: Subscribe
       taggable: false
       push_tags: false
       multiple: false

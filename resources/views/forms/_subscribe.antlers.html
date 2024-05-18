@@ -1,0 +1,46 @@
+<div class="flex max-w-5xl mx-auto justify-center items-center py-10 bg-gradient-to-r from-yellow-500 to-blue-500 rounded-lg">
+    <div class="w-full max-w-lg p-8 bg-white shadow-2xl rounded-lg">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Subscribe to the Epsilonian</h2>
+        {{ form:rsvp }}
+            <!-- Success Message -->
+            {{ if success }}
+                <script>
+                    alert("{{ success }}");
+                </script>
+            {{ else }}
+                <!-- Error Messages -->
+                {{ if errors }}
+                    <div class="bg-red-500 text-white p-4 rounded-md mb-4">
+                        {{ errors }}
+                        {{ value }}<br>
+                        {{ /errors }}
+                    </div>
+                {{ /if }}
+
+                <!-- Form Fields -->
+                <div class="mb-2 flex space-x-4">
+                    <div class="w-1/2">
+                        <label for="name" class="block text-gray-700 text-base font-bold mb-2">Name</label>
+                        <input type="text" name="name" id="name" class="w-full px-4 py-3 mb-3 text-gray-900 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your name" required>
+                    </div>
+                    <div class="w-1/2">
+                        <label for="email" class="block text-gray-700 text-base font-bold mb-2">Email</label>
+                        <input type="email" name="email" id="email" class="w-full px-4 py-3 text-gray-900 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email" required>
+                    </div>
+                </div>
+
+                <!-- Honeypot Field for Spam Prevention -->
+                <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+
+                {{ if error }}
+                    <p class="text-red-500 text-xs italic">{{ error }}</p>
+                {{ /if }}
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Subscribe Now
+                </button>
+            {{ /if }}
+        {{ /form:rsvp }}
+    </div>
+</div>

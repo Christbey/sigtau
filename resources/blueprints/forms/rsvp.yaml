@@ -5,21 +5,6 @@ tabs:
       -
         fields:
           -
-            handle: select_field
-            field:
-              type: select
-              display: 'Select Field'
-              instructions_position: above
-              listable: hidden
-              searchable: true
-              clearable: false
-              multiple: false
-              taggable: false
-              push_tags: false
-              cast_booleans: false
-              replicator_preview: true
-              hide_display: false
-          -
             handle: name
             field:
               type: text
@@ -34,28 +19,12 @@ tabs:
               validate:
                 - required
           -
-            handle: active_number
+            handle: email
             field:
-              input_type: text
+              input_type: email
               antlers: false
               type: text
-              display: 'Active Number'
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: true
-          -
-            handle: activity
-            field:
-              taggable: false
-              push_tags: false
-              multiple: false
-              clearable: false
-              searchable: true
-              cast_booleans: false
-              type: select
-              display: Activity
+              display: email
               listable: hidden
               instructions_position: above
               visibility: visible
